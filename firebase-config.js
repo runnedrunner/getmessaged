@@ -22,11 +22,6 @@ function readMessages(callback) {
   })
 }
 
-function clearMessages() {
-  console.log("clearing")
-  store.child("messages").remove();
-}
-
 function listenForClear(onClear) {
   store.child("messages").on("value", function(data) {
     var messages = data.val()
