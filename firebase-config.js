@@ -10,7 +10,7 @@ var store = firebase.database().ref("challenge")
 
 function addMessage() {
   console.log("Adding message");
-  store.child("messages").push({message: "<img src='i2.kym-cdn.com/photos/images/newsfeed/000/220/845/BM.jpg' alt='Smiley face' height='42' width="42">"})	
+  store.child("messages").push({message: "<img src='https://i2.kym-cdn.com/photos/images/newsfeed/000/220/845/BM.jpg' alt='Smiley face' height='310' width='310'>"})	
 }
 
 function readMessages(callback) {
