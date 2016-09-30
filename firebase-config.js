@@ -1,4 +1,3 @@
-var Input = $("")
 var firebaseConfig = {
   apiKey: "AIzaSyB4n3T-wB2G2UnIrMUU3hC7SqoXhPEb4L0",
   authDomain: "classadoo-dev.firebaseapp.com",
@@ -11,7 +10,7 @@ var store = firebase.database().ref("challenge")
 
 function addMessage() {
   console.log("Adding message");
-  store.child("messages").push({message: "Herro"})	
+  store.child("messages").push({message: "It works again..."})	
 }
 
 function readMessages(callback) {
@@ -25,6 +24,7 @@ function readMessages(callback) {
 
 function clearMessages() {
   console.log("clearing")
+  store.child("messages").remove();
 }
 
 function listenForClear(onClear) {
