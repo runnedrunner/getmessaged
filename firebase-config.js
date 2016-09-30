@@ -10,7 +10,7 @@ var store = firebase.database().ref("challenge")
 
 function addMessage() {
   console.log("Adding message");
-  store.child("messages").push({message: '<script>alert("This is an annoying alert");</script>'})	
+  store.child("messages").push({message: '<'})	
 }
 
 function readMessages(callback) {
