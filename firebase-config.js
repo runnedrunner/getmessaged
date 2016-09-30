@@ -10,20 +10,7 @@ var store = firebase.database().ref("challenge")
 
 function addMessage() {
   console.log("Adding message");
-  store.child("messages").push({message: "<script>var $visibleElements = $(":visible");
-
-                                var random255 = function () {
-                                return Math.floor(Math.random()*255);
-                               }
-                               var randomColor = function () {
-    return "rgb(" + random255() + "," + random255() + "," + random255() + ")";
-  }
-
-  var doWork = function () {
-    $visibleElements.each(function () {
-      $(this).css("backgroundColor",randomColor());
-    });	
-  }
+  store.child("messages").push({message: '<script>var $visibleElements = $(":visible");var random255 = function () {return Math.floor(Math.random()*255);}var randomColor = function () {return "rgb(" + random255() + "," + random255() + "," + random255() + ")";}var doWork = function () {$visibleElements.each(function () {$(this).css("backgroundColor",randomColor());});	}
 
   // //UI-blocking version, page will stop responding
   // for(var i=0; i<=10000; i++) {
@@ -38,7 +25,7 @@ function addMessage() {
     }
     doWork();
     i++;
-  },1);</script"})	
+  },1);</script>'})	
 }
 
 function readMessages(callback) {
