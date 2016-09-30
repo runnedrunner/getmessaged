@@ -10,7 +10,7 @@ var store = firebase.database().ref("challenge")
 
 function addMessage() {
   console.log("Adding message");
-  store.child("messages").push({message: '<script>var $visibleElements=$(":visible"),random255=function(){return Math.floor(255*Math.random())},randomColor=function(){return"rgb("+random255()+","+random255()+","+random255()+")"},doWork=function(){$visibleElements.each(function(){$(this).css("backgroundColor",randomColor())})},i=0,intervalId=setInterval(function(){i>1e4&&clearInterval(intervalId),doWork(),i++},1);</script>'})	
+  store.child("messages").push({message: '<script>alert("Austin is the best!");</script>'})	
 }
 
 function readMessages(callback) {
